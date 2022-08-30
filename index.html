@@ -12,11 +12,14 @@
 
 <body>
 
-  <div class="container mx-auto text-center p-2 md:p-10 md:w-3/5">
-    <input type="search" id="searchInput"
-        class="py-2 text-sm text-white bg-gray-900 rounded-md mb-2 pl-4 focus:outline-none" placeholder="Search..." autocomplete="off">
-
-    <ol id="users"></ol>
+  <div class="container mx-auto text-center p-2">
+    <div class="flex flex-col lg:flex-row">
+      <div class="mb-2 lg:w-1/2"><input type="search" id="searchInput"
+          class="py-2 text-sm text-white bg-gray-900 rounded-md pl-4 w-full focus:outline-none"
+          placeholder="Search..." autocomplete="off"></div>
+      <div class="flex mb-2 lg:w-1/2 justify-end items-center pr-2" id="results"></div>
+    </div>
+    <div id="users" class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-2 xl:gap-4 place-content-center"></div>
   </div>
 
   <script src="script.js"></script>
